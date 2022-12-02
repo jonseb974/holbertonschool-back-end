@@ -11,8 +11,8 @@ if __name__ == '__main__':
     data_one = first.json()
 
     row = []
-    second = get()
-    data_two = second.json('https://jsonplaceholder.typicode.com/users/')
+    second = get('https://jsonplaceholder.typicode.com/users/')
+    data_two = second.json()
 
     for todo in data_two:
         if todo['id'] == int(['id']):
