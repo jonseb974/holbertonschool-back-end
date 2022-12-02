@@ -15,7 +15,7 @@ if __name__ == '__main__':
     data_two = second.json()
 
     for i in data_two:
-        if i['id'] == int(argv['id']):
+        if i['id'] == int(argv[1]):
             employee = i['username']
 
     with open(argv[1] + '.csv', 'w', newline='') as file:
