@@ -13,19 +13,19 @@ if __name__ == '__main__':
     url_two = get('https://jsonplaceholder.typicode.com/users/')
     data_two = url_two.json()
 
-    for item in data_two:
-        if item['id'] == int(argv[1]):
-            employee = item['username']
-            id_nb = item['id']
+    for i in data_two:
+        if i['id'] == int(argv[1]):
+            employee = i['username']
+            id_nb = i['id']
 
     row = []
 
-    for item in data_one:
+    for i in data_one:
         new_dict = {}
-        if item['usersId'] == int(argv[1]):
+        if i['userId'] == int(argv[1]):
             new_dict['username'] = employee
-            new_dict['task'] = item['title']
-            new_dict['completed'] = item['completed']
+            new_dict['task'] = i['title']
+            new_dict['completed'] = i['completed']
             row.append(new_dict)
 
     full_dict = {}
