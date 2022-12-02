@@ -14,18 +14,18 @@ if __name__ == '__main__':
     second = get('https://jsonplaceholder.typicode.com/users/')
     data_two = second.json()
 
-    for todo in data_two:
-        if todo['id'] == int(['id']):
-            employee = todo['username']
+    for i in data_two:
+        if i['id'] == int(argv['id']):
+            employee = i['username']
 
     with open(argv[1] + '.csv', 'w', newline='') as file:
         wrti = csv.writer(file, quoting=csv.QUOTE_ALL)
 
-        for todo in data_one:
+        for i in data_one:
             row = []
-            if todo['userId'] == int(argv[1]):
+            if i['userId'] == int(argv[1]):
                 row.append(employee)
-                row.append(todo['completed'])
-                row.append(todo['title'])
-                row.append(todo['userId'])
+                row.append(i['completed'])
+                row.append(i['title'])
+                row.append(i['userId'])
                 wrti.writerow(row)
