@@ -24,8 +24,8 @@ if __name__ == '__main__':
         for i in data_one:
             row = []
             if i['userId'] == int(argv[1]):
+                row.append(i['userId'])
                 row.append(employee)
                 row.append(i['completed'])
                 row.append(i['title'])
-                row.append(i['userId'])
                 wrti.writerow(row)
