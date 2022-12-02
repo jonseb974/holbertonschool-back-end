@@ -19,8 +19,8 @@ if __name__ == '__main__':
         for i in data_one:
             new_dict2 = {}
             if j['id'] == i['userId']:
-                new_dict2['id'] = j['username']
-                new_dict2['name'] = i['title']
+                new_dict2['username'] = j['username']
+                new_dict2['task'] = i['title']
                 new_dict2['completed'] = i['completed']
                 row.append(new_dict2)
         new_dict[j['id']] = row
